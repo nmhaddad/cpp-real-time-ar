@@ -1,0 +1,255 @@
+\hypertarget{class_object_model}{}\doxysection{Object\+Model Class Reference}
+\label{class_object_model}\index{ObjectModel@{ObjectModel}}
+
+
+{\ttfamily \#include $<$Object\+Model.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_model_ad69aa4543b340c1c8a534aeb791397bb}{Object\+Model}} ()=default
+\item 
+\mbox{\hyperlink{class_object_model_a88855e1214e3f7710a76d1dbb6091b89}{Object\+Model}} (const std\+::string PATH)
+\item 
+std\+::vector$<$ cv\+::\+Vec3f $>$ \mbox{\hyperlink{class_object_model_a08c8b484de0e18d11e676f25d9d16301}{get\+Vertices}} ()
+\item 
+std\+::vector$<$ cv\+::\+Vec3f $>$ \mbox{\hyperlink{class_object_model_a85332673f0a74b1165f57cb7d9625e3f}{get\+Indices}} ()
+\item 
+bool \mbox{\hyperlink{class_object_model_ae05c6e552d60c0b150c249f90687cd22}{load\+Obj}} (const std\+::string PATH)
+\item 
+bool \mbox{\hyperlink{class_object_model_a5c5f2afef91c338d3d0b846781f9e530}{load\+Corners}} (int rows, int cols)
+\item 
+bool \mbox{\hyperlink{class_object_model_a315d218d67b695322234d26a3ee25d77}{load\+Axes}} ()
+\item 
+bool \mbox{\hyperlink{class_object_model_ad6b950c27b1478934f01c098779a7ecb}{set\+Object\+Model}} (const int rows=6, const int cols=9)
+\item 
+std\+::string \mbox{\hyperlink{class_object_model_a75c1fb867cd70cd0b14c2f60a7589827}{get\+Object\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_object_model_a699b6aa6a57cae024df829c33fb6ec78}{apply\+Transform}} (cv\+::\+Mat transform, bool homogeneous=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_object_model_a414820e4f1a644b8e89b52cd572f70bf}{draw}} (cv\+::\+Mat \&src, std\+::vector$<$ cv\+::\+Point2f $>$ points, std\+::vector$<$ cv\+::\+Vec3f $>$ indices)
+\item 
+static void \mbox{\hyperlink{class_object_model_ab4d69f92ce2993459de9116af8682d9b}{draw\+Axes}} (cv\+::\+Mat \&src, std\+::vector$<$ cv\+::\+Point2f $>$ points)
+\item 
+static void \mbox{\hyperlink{class_object_model_af3844fa19213e8303d6ef94ae5404105}{draw\+Circles}} (cv\+::\+Mat \&src, std\+::vector$<$ cv\+::\+Point2f $>$ points)
+\item 
+static std\+::vector$<$ cv\+::\+Point3f $>$ \mbox{\hyperlink{class_object_model_ae817992a68d851de6d882d3ebe133dca}{eq\+Triangle\+Vertices\+And\+Centroid}} (double side\+Length, cv\+::\+Point3f bottom\+Left)
+\item 
+static cv\+::\+Point3f \mbox{\hyperlink{class_object_model_ace5e1c41bcaf752ef811daceb4cf6ea7}{centroid\+Triangle\+XY}} (cv\+::\+Point3f a, cv\+::\+Point3f b, cv\+::\+Point3f c)
+\item 
+static std\+::vector$<$ std\+::vector$<$ cv\+::\+Vec3f $>$ $>$ \mbox{\hyperlink{class_object_model_a0b4af997316c509fbc1ec4cb9cdd124a}{star\+Coordinates}} (double side\+Size, cv\+::\+Vec3f bottom\+Left, double theta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents an object model. Used from AR applications 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_object_model_ad69aa4543b340c1c8a534aeb791397bb}\label{class_object_model_ad69aa4543b340c1c8a534aeb791397bb}} 
+\index{ObjectModel@{ObjectModel}!ObjectModel@{ObjectModel}}
+\index{ObjectModel@{ObjectModel}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{ObjectModel()}{ObjectModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Object\+Model\+::\+Object\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+The default constructor for an object model \mbox{\Hypertarget{class_object_model_a88855e1214e3f7710a76d1dbb6091b89}\label{class_object_model_a88855e1214e3f7710a76d1dbb6091b89}} 
+\index{ObjectModel@{ObjectModel}!ObjectModel@{ObjectModel}}
+\index{ObjectModel@{ObjectModel}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{ObjectModel()}{ObjectModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Object\+Model\+::\+Object\+Model (\begin{DoxyParamCaption}\item[{const std\+::string}]{PATH }\end{DoxyParamCaption})}
+
+An object model constructor that takes in a path and loads a model 
+\begin{DoxyParams}{Parameters}
+{\em PATH} & (const std\+::string) a filepath \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_model_a699b6aa6a57cae024df829c33fb6ec78}\label{class_object_model_a699b6aa6a57cae024df829c33fb6ec78}} 
+\index{ObjectModel@{ObjectModel}!applyTransform@{applyTransform}}
+\index{applyTransform@{applyTransform}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{applyTransform()}{applyTransform()}}
+{\footnotesize\ttfamily void Object\+Model\+::apply\+Transform (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{transform,  }\item[{bool}]{homogeneous = {\ttfamily false} }\end{DoxyParamCaption})}
+
+apply\+Transform 
+\begin{DoxyParams}{Parameters}
+{\em transform} & (cv\+::\+Mat) the transformation matrix used to multiply each point \\
+\hline
+{\em homogeneous} & (bool) whether or not to use homogeneous transformations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_model_ace5e1c41bcaf752ef811daceb4cf6ea7}\label{class_object_model_ace5e1c41bcaf752ef811daceb4cf6ea7}} 
+\index{ObjectModel@{ObjectModel}!centroidTriangleXY@{centroidTriangleXY}}
+\index{centroidTriangleXY@{centroidTriangleXY}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{centroidTriangleXY()}{centroidTriangleXY()}}
+{\footnotesize\ttfamily cv\+::\+Point3f Object\+Model\+::centroid\+Triangle\+XY (\begin{DoxyParamCaption}\item[{cv\+::\+Point3f}]{a,  }\item[{cv\+::\+Point3f}]{b,  }\item[{cv\+::\+Point3f}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+centroid\+Triangle\+XY 
+\begin{DoxyParams}{Parameters}
+{\em a} & (cv\+::\+Point3f) triangle vertex a \\
+\hline
+{\em b} & (cv\+::\+Point3f) triangle vertex b \\
+\hline
+{\em c} & (cv\+::\+Point3f) triangle vertex c \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Point3f) mean of three vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a414820e4f1a644b8e89b52cd572f70bf}\label{class_object_model_a414820e4f1a644b8e89b52cd572f70bf}} 
+\index{ObjectModel@{ObjectModel}!draw@{draw}}
+\index{draw@{draw}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Object\+Model\+::draw (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{src,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$}]{points,  }\item[{std\+::vector$<$ cv\+::\+Vec3f $>$}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+draw 
+\begin{DoxyParams}{Parameters}
+{\em src} & (cv\+::\+Mat \&) a reference to a image to draw to \\
+\hline
+{\em points} & (std\+::vector$<$cv\+::\+Point2f$>$) 2D points in an image \\
+\hline
+{\em indices} & (std\+::vector$<$cv\+::\+Vec3f$>$) the indices for the vertices (taken from obj file) @does draws a wireframe image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_model_ab4d69f92ce2993459de9116af8682d9b}\label{class_object_model_ab4d69f92ce2993459de9116af8682d9b}} 
+\index{ObjectModel@{ObjectModel}!drawAxes@{drawAxes}}
+\index{drawAxes@{drawAxes}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{drawAxes()}{drawAxes()}}
+{\footnotesize\ttfamily void Object\+Model\+::draw\+Axes (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{src,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+draw\+Axes 
+\begin{DoxyParams}{Parameters}
+{\em src} & (cv\+::\+Mat \&) a reference to a image to draw to \\
+\hline
+{\em points} & (std\+::vector$<$cv\+::\+Point2f$>$) 2D points in an image @does draws 3D axes in RGB colors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_model_af3844fa19213e8303d6ef94ae5404105}\label{class_object_model_af3844fa19213e8303d6ef94ae5404105}} 
+\index{ObjectModel@{ObjectModel}!drawCircles@{drawCircles}}
+\index{drawCircles@{drawCircles}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{drawCircles()}{drawCircles()}}
+{\footnotesize\ttfamily void Object\+Model\+::draw\+Circles (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{src,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+draw\+Circles 
+\begin{DoxyParams}{Parameters}
+{\em src} & (cv\+::\+Mat \&) a reference to a image to draw to \\
+\hline
+{\em points} & (std\+::vector$<$cv\+::\+Point2f$>$) 2D points in an image @does draws circles in the four corners of the chessboard \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_object_model_ae817992a68d851de6d882d3ebe133dca}\label{class_object_model_ae817992a68d851de6d882d3ebe133dca}} 
+\index{ObjectModel@{ObjectModel}!eqTriangleVerticesAndCentroid@{eqTriangleVerticesAndCentroid}}
+\index{eqTriangleVerticesAndCentroid@{eqTriangleVerticesAndCentroid}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{eqTriangleVerticesAndCentroid()}{eqTriangleVerticesAndCentroid()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Point3f $>$ Object\+Model\+::eq\+Triangle\+Vertices\+And\+Centroid (\begin{DoxyParamCaption}\item[{double}]{side\+Length,  }\item[{cv\+::\+Point3f}]{bottom\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+eq\+Triangle\+Vertices\+And\+Centroid 
+\begin{DoxyParams}{Parameters}
+{\em side\+Length} & (double) side length of equalateral triangle \\
+\hline
+{\em bottom\+Left} & (cv\+::\+Point3f) bottom left vertex of equalateral triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$cv\+::\+Point3d$>$) 3 vertices in the triangle and centroid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a85332673f0a74b1165f57cb7d9625e3f}\label{class_object_model_a85332673f0a74b1165f57cb7d9625e3f}} 
+\index{ObjectModel@{ObjectModel}!getIndices@{getIndices}}
+\index{getIndices@{getIndices}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{getIndices()}{getIndices()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Vec3f $>$ Object\+Model\+::get\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Indices \begin{DoxyReturn}{Returns}
+(std\+::vector$<$cv\+::\+Vec3f$>$) gets the indices for this object model 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a75c1fb867cd70cd0b14c2f60a7589827}\label{class_object_model_a75c1fb867cd70cd0b14c2f60a7589827}} 
+\index{ObjectModel@{ObjectModel}!getObjectType@{getObjectType}}
+\index{getObjectType@{getObjectType}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{getObjectType()}{getObjectType()}}
+{\footnotesize\ttfamily std\+::string Object\+Model\+::get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Object\+Type \begin{DoxyReturn}{Returns}
+(std\+::string) an object string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a08c8b484de0e18d11e676f25d9d16301}\label{class_object_model_a08c8b484de0e18d11e676f25d9d16301}} 
+\index{ObjectModel@{ObjectModel}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Vec3f $>$ Object\+Model\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Vertices \begin{DoxyReturn}{Returns}
+(std\+::vector$<$cv\+::\+Vec3f$>$) gets the vertices for this object model 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a315d218d67b695322234d26a3ee25d77}\label{class_object_model_a315d218d67b695322234d26a3ee25d77}} 
+\index{ObjectModel@{ObjectModel}!loadAxes@{loadAxes}}
+\index{loadAxes@{loadAxes}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{loadAxes()}{loadAxes()}}
+{\footnotesize\ttfamily bool Object\+Model\+::load\+Axes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+load\+Axes \begin{DoxyReturn}{Returns}
+(bool) whether the 3 axes were loaded successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a5c5f2afef91c338d3d0b846781f9e530}\label{class_object_model_a5c5f2afef91c338d3d0b846781f9e530}} 
+\index{ObjectModel@{ObjectModel}!loadCorners@{loadCorners}}
+\index{loadCorners@{loadCorners}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{loadCorners()}{loadCorners()}}
+{\footnotesize\ttfamily bool Object\+Model\+::load\+Corners (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+load\+Corners 
+\begin{DoxyParams}{Parameters}
+{\em rows} & (int) the number of rows used to calculate corners \\
+\hline
+{\em cols} & (int) the number of columns used to calculate corners \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bool) whether the 4 corners of the chessboard were loaded successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_ae05c6e552d60c0b150c249f90687cd22}\label{class_object_model_ae05c6e552d60c0b150c249f90687cd22}} 
+\index{ObjectModel@{ObjectModel}!loadObj@{loadObj}}
+\index{loadObj@{loadObj}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{loadObj()}{loadObj()}}
+{\footnotesize\ttfamily bool Object\+Model\+::load\+Obj (\begin{DoxyParamCaption}\item[{const std\+::string}]{PATH }\end{DoxyParamCaption})}
+
+load\+Obj 
+\begin{DoxyParams}{Parameters}
+{\em PATH} & (const std\+::string) the path to the obj file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bool) whether or not the obj was loaded successfully @does parses an obj file and saves its vertices and indices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_ad6b950c27b1478934f01c098779a7ecb}\label{class_object_model_ad6b950c27b1478934f01c098779a7ecb}} 
+\index{ObjectModel@{ObjectModel}!setObjectModel@{setObjectModel}}
+\index{setObjectModel@{setObjectModel}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{setObjectModel()}{setObjectModel()}}
+{\footnotesize\ttfamily bool Object\+Model\+::set\+Object\+Model (\begin{DoxyParamCaption}\item[{const int}]{rows = {\ttfamily 6},  }\item[{const int}]{cols = {\ttfamily 9} }\end{DoxyParamCaption})}
+
+set\+Object\+Model \begin{DoxyReturn}{Returns}
+(bool) whether or not the object was successfully created @does this is a prompt for selecting what to draw to the screen, then loads it 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_model_a0b4af997316c509fbc1ec4cb9cdd124a}\label{class_object_model_a0b4af997316c509fbc1ec4cb9cdd124a}} 
+\index{ObjectModel@{ObjectModel}!starCoordinates@{starCoordinates}}
+\index{starCoordinates@{starCoordinates}!ObjectModel@{ObjectModel}}
+\doxysubsubsection{\texorpdfstring{starCoordinates()}{starCoordinates()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ cv\+::\+Vec3f $>$ $>$ Object\+Model\+::star\+Coordinates (\begin{DoxyParamCaption}\item[{double}]{side\+Size,  }\item[{cv\+::\+Vec3f}]{bottom\+Left,  }\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+star\+Coordinates 
+\begin{DoxyParams}{Parameters}
+{\em side\+Size} & (double) size of triangle \\
+\hline
+{\em bottom\+Left} & (double) bottom left vertex of equalateral triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$std\+::vector$<$cv\+::\+Vec3f$>$$>$) vertices of triangle one (base) and vertices of rotated triangle @does 6 Star of David coordinates paris \{(x1,y1),(x2,y,2)\} for each line, based on each of the two \char`\"{}triangles\char`\"{} being equilateral. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Object\+Model.\+h\item 
+src/Object\+Model.\+cpp\end{DoxyCompactItemize}

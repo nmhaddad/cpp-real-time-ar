@@ -1,0 +1,68 @@
+\hypertarget{class_utils}{}\doxysection{Utils Class Reference}
+\label{class_utils}\index{Utils@{Utils}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_utils_aa6da52c35c2da10f9f4e641d3c62c5d4}{save\+Intrinsic\+Parameters}} (cv\+::\+Mat camera\+Matrix, cv\+::\+Mat distortion\+Coefficients)
+\item 
+static std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_utils_a58bef9bab2ec2e0dd61f34efbd77b1ec}{load\+Intrinsic\+Parameters}} (std\+::string filename)
+\item 
+static char \mbox{\hyperlink{class_utils_a7b171d51853836074964fafe019da5b8}{prompt}} (std\+::string text)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for utility methods 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utils_a58bef9bab2ec2e0dd61f34efbd77b1ec}\label{class_utils_a58bef9bab2ec2e0dd61f34efbd77b1ec}} 
+\index{Utils@{Utils}!loadIntrinsicParameters@{loadIntrinsicParameters}}
+\index{loadIntrinsicParameters@{loadIntrinsicParameters}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{loadIntrinsicParameters()}{loadIntrinsicParameters()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Mat $>$ Utils\+::load\+Intrinsic\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+load\+Intrinsic\+Parameters 
+\begin{DoxyParams}{Parameters}
+{\em filename} & (std\+::string) the filepath to a yml file containing intrinsic parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(std\+::vector$<$cv\+::\+Mat$>$) a vector of two instrinsic parameters (camera matrix and distortion coefficients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_a7b171d51853836074964fafe019da5b8}\label{class_utils_a7b171d51853836074964fafe019da5b8}} 
+\index{Utils@{Utils}!prompt@{prompt}}
+\index{prompt@{prompt}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{prompt()}{prompt()}}
+{\footnotesize\ttfamily char Utils\+::prompt (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+prompt 
+\begin{DoxyParams}{Parameters}
+{\em text} & (std\+::string) the text part of the prompt that should appear to the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(char) \textquotesingle{}y\textquotesingle{} or \textquotesingle{}n\textquotesingle{} depending on user input @does a resuable prompt that allows text to be passed in to be displayed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_aa6da52c35c2da10f9f4e641d3c62c5d4}\label{class_utils_aa6da52c35c2da10f9f4e641d3c62c5d4}} 
+\index{Utils@{Utils}!saveIntrinsicParameters@{saveIntrinsicParameters}}
+\index{saveIntrinsicParameters@{saveIntrinsicParameters}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{saveIntrinsicParameters()}{saveIntrinsicParameters()}}
+{\footnotesize\ttfamily void Utils\+::save\+Intrinsic\+Parameters (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{camera\+Matrix,  }\item[{cv\+::\+Mat}]{distortion\+Coefficients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+save\+Intrinsic\+Parameters 
+\begin{DoxyParams}{Parameters}
+{\em camera\+Matrix} & (cv\+::\+Mat) the camera matrix \\
+\hline
+{\em distortion\+Coefficients} & (cv\+::\+Mat) the distortion coefficients @does writes the intrinsic parameters to a file (titled instrinsic\+\_\+\{TIME\}.yml) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Utils.\+h\item 
+src/Utils.\+cpp\end{DoxyCompactItemize}

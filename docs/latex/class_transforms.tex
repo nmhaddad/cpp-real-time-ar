@@ -1,0 +1,160 @@
+\hypertarget{class_transforms}{}\doxysection{Transforms Class Reference}
+\label{class_transforms}\index{Transforms@{Transforms}}
+
+
+{\ttfamily \#include $<$Transforms.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_transforms_a154dc9950b39a9b3d45505a0e53d2ce1}{uniform\+Scale3x3}} (const double factor)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_transforms_a2844f1b0e4b2e1f0734cb02efddd7c6d}{rotate\+X3x3}} (const double theta)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_transforms_a643b4662ca0e63a7a9a344d384ca9fac}{rotate\+Y3x3}} (const double theta)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_transforms_ae00690ff18c84bf0e300652571b487dd}{rotate\+Z3x3}} (const double theta)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_transforms_a2515dd1e34d6bdcc0293d47c6c375484}{create\+Homogeneous\+Transform}} (cv\+::\+Mat rotation, cv\+::\+Mat translation, const double uniform\+Scale=1)
+\item 
+static void \mbox{\hyperlink{class_transforms_a9b75f1c201b190397b764610c862be56}{translateH}} (const cv\+::\+Mat src, cv\+::\+Mat dst, const cv\+::\+Vec3f translation\+XYZ)
+\item 
+static void \mbox{\hyperlink{class_transforms_ac5d53a803bf8b27468f79d0d0dbf321e}{scaleH}} (const cv\+::\+Mat src, cv\+::\+Mat dst, const cv\+::\+Vec3f scale\+XYZ)
+\item 
+static void \mbox{\hyperlink{class_transforms_a248a56df0e6c5680f9bef0b5e898a3b7}{rotateZ}} (cv\+::\+Mat src, cv\+::\+Mat dst, double theta, bool about\+Origin, cv\+::\+Vec3f translation\+To\+Origin)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class used for creating transforms 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transforms_a2515dd1e34d6bdcc0293d47c6c375484}\label{class_transforms_a2515dd1e34d6bdcc0293d47c6c375484}} 
+\index{Transforms@{Transforms}!createHomogeneousTransform@{createHomogeneousTransform}}
+\index{createHomogeneousTransform@{createHomogeneousTransform}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{createHomogeneousTransform()}{createHomogeneousTransform()}}
+{\footnotesize\ttfamily cv\+::\+Mat Transforms\+::create\+Homogeneous\+Transform (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{rotation,  }\item[{cv\+::\+Mat}]{translation,  }\item[{const double}]{uniform\+Scale = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+create\+Homogeneous\+Transform 
+\begin{DoxyParams}{Parameters}
+{\em rotation} & (cv\+::\+Mat) rotation matrix (3x3) \\
+\hline
+{\em translation} & (cv\+::\+Mat) translation matrix (1x3) \\
+\hline
+{\em uniform\+Scale} & (const double) uniform scaling value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Mat) a homogeneous transformation matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transforms_a2844f1b0e4b2e1f0734cb02efddd7c6d}\label{class_transforms_a2844f1b0e4b2e1f0734cb02efddd7c6d}} 
+\index{Transforms@{Transforms}!rotateX3x3@{rotateX3x3}}
+\index{rotateX3x3@{rotateX3x3}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{rotateX3x3()}{rotateX3x3()}}
+{\footnotesize\ttfamily cv\+::\+Mat Transforms\+::rotate\+X3x3 (\begin{DoxyParamCaption}\item[{const double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+rotate\+X3x3 
+\begin{DoxyParams}{Parameters}
+{\em theta} & (const double) an angle theta used to rotate (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Mat) a 3x3 rotation matrix about the x-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transforms_a643b4662ca0e63a7a9a344d384ca9fac}\label{class_transforms_a643b4662ca0e63a7a9a344d384ca9fac}} 
+\index{Transforms@{Transforms}!rotateY3x3@{rotateY3x3}}
+\index{rotateY3x3@{rotateY3x3}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{rotateY3x3()}{rotateY3x3()}}
+{\footnotesize\ttfamily cv\+::\+Mat Transforms\+::rotate\+Y3x3 (\begin{DoxyParamCaption}\item[{const double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+rotate\+Y3x3 
+\begin{DoxyParams}{Parameters}
+{\em theta} & (const double) an angle theta used to rotate (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Mat) a 3x3 rotation matrix about the y-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transforms_a248a56df0e6c5680f9bef0b5e898a3b7}\label{class_transforms_a248a56df0e6c5680f9bef0b5e898a3b7}} 
+\index{Transforms@{Transforms}!rotateZ@{rotateZ}}
+\index{rotateZ@{rotateZ}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{rotateZ()}{rotateZ()}}
+{\footnotesize\ttfamily void Transforms\+::rotateZ (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{src,  }\item[{cv\+::\+Mat}]{dst,  }\item[{double}]{theta,  }\item[{bool}]{about\+Origin,  }\item[{cv\+::\+Vec3f}]{translation\+To\+Origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Rotate a homogenous 3D Point by about the Z axis for degree amount, either about origin, or about an arbitrary point (which is done by a translation (from the desired center of rotation) to the origin,a rotation, then with the negated translation that (-\/1 $\ast$ translation). 
+\begin{DoxyParams}{Parameters}
+{\em src} & (cv\+::\+Mat) \\
+\hline
+{\em dst} & (cv\+::\+Mat) \\
+\hline
+{\em theta} & (double) the degree amount of the rotation. \\
+\hline
+{\em about\+Origin} & (bool) determines whether translations occur to rorate src by an artbitrary point. \\
+\hline
+{\em translation\+To\+Origin} & (cv\+::\+Vec3f) populated with values only if about\+Origin is true. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transforms_ae00690ff18c84bf0e300652571b487dd}\label{class_transforms_ae00690ff18c84bf0e300652571b487dd}} 
+\index{Transforms@{Transforms}!rotateZ3x3@{rotateZ3x3}}
+\index{rotateZ3x3@{rotateZ3x3}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{rotateZ3x3()}{rotateZ3x3()}}
+{\footnotesize\ttfamily cv\+::\+Mat Transforms\+::rotate\+Z3x3 (\begin{DoxyParamCaption}\item[{const double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+rotate\+Z3x3 
+\begin{DoxyParams}{Parameters}
+{\em theta} & (const double) an angle theta used to rotate (radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Mat) a 3x3 rotation matrix about the z-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transforms_ac5d53a803bf8b27468f79d0d0dbf321e}\label{class_transforms_ac5d53a803bf8b27468f79d0d0dbf321e}} 
+\index{Transforms@{Transforms}!scaleH@{scaleH}}
+\index{scaleH@{scaleH}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{scaleH()}{scaleH()}}
+{\footnotesize\ttfamily void Transforms\+::scaleH (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat}]{src,  }\item[{cv\+::\+Mat}]{dst,  }\item[{const cv\+::\+Vec3f}]{scale\+XYZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+scale Scale a homogenous 3D Point by a sx,sy,sz 
+\begin{DoxyParams}{Parameters}
+{\em src} & (const cv\+::\+Mat) a 4x1 Matrix CV\+\_\+64\+FC1 to be scaled. \\
+\hline
+{\em dst} & (const cv\+::\+Mat) translated 4x1 Matrix CV\+\_\+64\+FC1 \\
+\hline
+{\em scale\+XYZ} & (const cv\+::\+Vec3f) sx, sy, sz. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transforms_a9b75f1c201b190397b764610c862be56}\label{class_transforms_a9b75f1c201b190397b764610c862be56}} 
+\index{Transforms@{Transforms}!translateH@{translateH}}
+\index{translateH@{translateH}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{translateH()}{translateH()}}
+{\footnotesize\ttfamily void Transforms\+::translateH (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat}]{src,  }\item[{cv\+::\+Mat}]{dst,  }\item[{const cv\+::\+Vec3f}]{translation\+XYZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+translate Translate a homogenous 3D Point by tx,ty,tz 
+\begin{DoxyParams}{Parameters}
+{\em src} & (const cv\+::\+Mat) a 4x1 Matrix CV\+\_\+64\+FC1 to be translated. \\
+\hline
+{\em dst} & (const cv\+::\+Mat) translated 4x1 Matrix CV\+\_\+64\+FC1 \\
+\hline
+{\em translation\+XYZ} & (const cv\+::\+Vec3f) tx, ty, tz. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transforms_a154dc9950b39a9b3d45505a0e53d2ce1}\label{class_transforms_a154dc9950b39a9b3d45505a0e53d2ce1}} 
+\index{Transforms@{Transforms}!uniformScale3x3@{uniformScale3x3}}
+\index{uniformScale3x3@{uniformScale3x3}!Transforms@{Transforms}}
+\doxysubsubsection{\texorpdfstring{uniformScale3x3()}{uniformScale3x3()}}
+{\footnotesize\ttfamily cv\+::\+Mat Transforms\+::uniform\+Scale3x3 (\begin{DoxyParamCaption}\item[{const double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+uniform\+Scale3x3 
+\begin{DoxyParams}{Parameters}
+{\em factor} & (const double) a factor at which to scale vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(cv\+::\+Mat) a matrix used for uniform scaling 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Transforms.\+h\item 
+src/Transforms.\+cpp\end{DoxyCompactItemize}
